@@ -1,0 +1,36 @@
+﻿<UserControl
+    x:Class="WbooruPlugin.BossKey.UI.ConfigBossKeyEnterControl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:WbooruPlugin.BossKey.UI"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+    <StackPanel Orientation="Horizontal">
+        <TextBlock
+            VerticalAlignment="Center"
+            FontSize="16"
+            Foreground="White">
+            老板键:
+        </TextBlock>
+        <TextBlock
+            Name="BossKeyValue"
+            MaxWidth="300"
+            Margin="10,0,10,0"
+            VerticalAlignment="Center"
+            FontSize="16"
+            Foreground="White"
+            TextWrapping="Wrap">
+            Shift + A
+        </TextBlock>
+        <Button
+            Padding="10,5,10,5"
+            VerticalAlignment="Center"
+            Background="Transparent"
+            BorderBrush="White"
+            Click="Button_Click"
+            Foreground="White">
+            自定义
+        </Button>
+    </StackPanel>
+</UserControl>
