@@ -69,6 +69,7 @@
     <ProjectReference Include="..\..\Wbooru\Wbooru.csproj">
       <Project>{C707353F-3E50-49B7-A2E1-1DF669305470}</Project>
       <Name>Wbooru</Name>
+      <Private>False</Private>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
