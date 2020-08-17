@@ -1,4 +1,4 @@
-﻿using EventHook;
+﻿using EventHook.Hooks;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,9 +20,7 @@ namespace WbooruPlugin.BossKey
         {
             CurrentImpl = this;
 
-            using var factory = new EventHookFactory();
-
-            keyboard_watcher = factory.GetKeyboardWatcher();
+            keyboard_watcher = new KeyboardWatcher(new SyncFactory());
 
             keyboard_watcher.OnKeyInput += Keyboard_watcher_OnKeyInput;
 
