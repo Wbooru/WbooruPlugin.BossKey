@@ -31,7 +31,7 @@ namespace WbooruPlugin.BossKey.UI
 
         private void UpdateCurrentHotKey()
         {
-            BossKeyValue.Text = string.Join(" + ", SettingManager.LoadSetting<BossKeySetting>().HotKeys);
+            BossKeyValue.Text = string.Join(" + ", Setting<BossKeySetting>.Current.HotKeys);
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -44,7 +44,7 @@ namespace WbooruPlugin.BossKey.UI
 
             if (keys!=null && keys.Count != 0)
             {
-                SettingManager.LoadSetting<BossKeySetting>().HotKeys = keys.ToArray();
+                Setting<BossKeySetting>.Current.HotKeys = keys.ToArray();
 
                 UpdateCurrentHotKey();
             }

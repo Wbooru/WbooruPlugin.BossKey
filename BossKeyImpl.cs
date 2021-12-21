@@ -24,7 +24,7 @@ namespace WbooruPlugin.BossKey
 
             keyboard_watcher.OnKeyInput += Keyboard_watcher_OnKeyInput;
 
-            var setting = SettingManager.LoadSetting<BossKeySetting>();
+            var setting = Setting<BossKeySetting>.Current;
 
             UpdateTriggerKeys(setting.HotKeys);
 
@@ -80,6 +80,7 @@ namespace WbooruPlugin.BossKey
                 {
                     Visibility.Visible => Visibility.Hidden,
                     Visibility.Hidden => Visibility.Visible,
+                    _ => Visibility.Collapsed,
                 };
             });
         }

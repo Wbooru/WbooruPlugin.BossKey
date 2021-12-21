@@ -1,6 +1,6 @@
-﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <TargetFramework>net5.0-windows</TargetFramework>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <OutputType>Library</OutputType>
     <LangVersion>preview</LangVersion>
@@ -23,6 +23,6 @@
     <PackageReference Include="System.Data.DataSetExtensions" Version="4.5.0" />
   </ItemGroup>
   <Target Name="PostBuild" AfterTargets="PostBuildEvent">
-    <Exec Command="xcopy &quot;$(ProjectDir)$(OutDir)*&quot; &quot;$(SolutionDir)Wbooru\bin\$(ConfigurationName)\netcoreapp3.1\Plugins\$(ProjectName)\&quot; /e /s /y" />
+    <Exec Command="xcopy &quot;$(ProjectDir)$(OutDir)*&quot; &quot;$(SolutionDir)Wbooru\bin\$(ConfigurationName)\net5.0-windows\Plugins\$(ProjectName)\&quot; /e /s /y" />
   </Target>
 </Project>
